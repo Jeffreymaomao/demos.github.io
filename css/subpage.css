@@ -41,7 +41,8 @@ width:80%; border-radius:20px;
 div.content {
 	margin-left: 200px;
 	padding: 1px 16px;
-	background-color: rgb(255,255,255)
+	background-color: rgb(255,255,255);
+	text-align: center;
 }
 
 .my_information		{
@@ -151,6 +152,7 @@ color:white
 	.foot1 {
 		margin-left:0px
 	}
+	
 
 }
 
