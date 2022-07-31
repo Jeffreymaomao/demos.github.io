@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desmos</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/subpage.css">
+	<base target="_blank">
+	<script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+	
+</head>
+
+<body  style="max-width:1600px">
+
+<div class="sidebar">
+	<div class="my_information">
+		<center>
+		<img src="skate.jpg" class="sidebar_img">
+		</center>
+		<p style="text-align-left">
+		Chang Mao Yang
+		<br>
+		楊長茂
+		</p>
+	</div>
+	<a class="active" href="#top" target="_self">
+		Home
+		</a>
+	<a href="./html/mathematics.html" target="_self">
+		Mathematics
+		</a>
+	<a  href="./html/physics.html" target="_self">
+		Physics
+		</a>
+	<a href="./html/computer_vision.html" target="_self">
+		Computer vision
+		</a>
+</div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="content">
+	<h1 style="margin:16px 0px 16px 16px; text-align:center"> Desmos  <img src="desmos.png" width="40" height="40"> </h1>
+	<hr class="style1">
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+<h2>Introduce</h2>
+<p style="margin:10px 5% 10px 5%; width: 90%; font-size:20px;">
+Desmos is an advanced graphing calculator implemented as a web application and a mobile application written in JavaScript.</p>
+<p style="margin:10px 5% 10px 5%; width: 90%font-size:300%; font-size:20px;">
+In addition to graphing both equations and inequalities, it also features lists, plots, regressions, interactive variables, graph restriction, simultaneous graphing, piece wise function graphing, polar function graphing, two types of graphing grids – among other computational features commonly found in a programmable calculator. Another peculiar use of the calculator involves the creation of graphic arts which involves an elaborated use of curve modelling through equations and inequalities. Yet another use is to make music, using the calculator's auto trace function.
+</p>
+<h2>Example</h2>
+<h3>Plot function</h3>
+	<div id="example1" style="margin:1% 5% 1% 5%; width: 90%; height: 500px;"></div>
+		<script>
+			var elt1 = document.getElementById('example1');
+			var calculator = Desmos.GraphingCalculator(elt1);
+			calculator.setExpression({ id: 'a-slider', latex: 'a=1' });
+			calculator.setExpression({ id: 'graph1', latex: 'y=ax' ,color :'#c74440'});
+			calculator.setExpression({ id: 'graph2', latex: 'y=ax^2' ,color :'#2d70b3'});
+			calculator.setExpression({ id: 'graph3', latex: 'y=\\sin\\left(ax\\right)' ,color :'#000000'});
+		</script>
+<h3>Plot point and parametric function</h3>
+	<div id="example2" style="margin:1% 5% 1% 5%; width: 90%; height: 500px;"></div>
+		<script>
+			var elt = document.getElementById('example2');
+			var calculator = Desmos.GraphingCalculator(elt);
+			calculator.setExpression({ id: 'the', latex: '\\theta_0=2.6' });
+			calculator.setExpression({ id: 'para1', latex: '\\left(\\cos \\theta_0,\\sin \\theta_0\\right)' ,color :'#c74440'});
+			calculator.setExpression({ id: 'para2', latex: '\\left(\\cos 2\\pi t,\\sin 2\\pi t\\right)' ,color :'#c74440'});
+			calculator.setExpression({
+				id: 'pointA',
+				latex: 'A = \\left(2,3\\right)',
+				dragMode: Desmos.DragModes.XY,
+				color :'#2d70b3'
+			});
+			calculator.setExpression({ id: 'circle1', latex: '\\left(x-A.x\\right)^2 + \\left(y-A.y\\right)^2 \\leq 4' ,color :'#2d70b3'});
+		</script>
+
+
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+</div>
+<br><br><br><br>
+<footer class="foot1">
+	<div>
+		<h3>Produce by meself</h3>
+		<hr style="color:white">
+		<p>Chang Mao Yang 楊長茂</p>
+		<p>emial: jeffrey0613mao@gmail.com</p>
+		<p>IG: yangchangmao</p>
+	</div>
+</footer>
+
+
+
+</body>
+</html>
+
+
+
